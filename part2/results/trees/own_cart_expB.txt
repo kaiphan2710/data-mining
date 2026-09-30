@@ -1,0 +1,22 @@
+detailed_occupation_recode in {0, 10, 12, 13, 14, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45}
+|   capital_gains <= 7364.000
+|   |   detailed_occupation_recode in {0, 13, 19, 23, 24, 26, 27, 29, 30, 31, 32, 36, 37, 38, 40, 41, 42, 44}
+|   |   |   P(>50K)=0.012 n=144670
+|   |   detailed_occupation_recode not in {0, 13, 19, 23, 24, 26, 27, 29, 30, 31, 32, 36, 37, 38, 40, 41, 42, 44}
+|   |   |   P(>50K)=0.094 n=23993
+|   capital_gains > 7364.000
+|   |   capital_gains <= 10041.000
+|   |   |   P(>50K)=0.327 n=431
+|   |   capital_gains > 10041.000
+|   |   |   P(>50K)=0.718 n=639
+detailed_occupation_recode not in {0, 10, 12, 13, 14, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45}
+|   capital_gains <= 7364.000
+|   |   education in {10th grade, 11th grade, 12th grade no diploma, 1st 2nd 3rd or 4th grade, 5th or 6th grade, 7th and 8th grade, 9th grade, Associates degree-academic program, Associates degree-occup /vocational, High school graduate, Less than 1st grade, Some college but no degree}
+|   |   |   P(>50K)=0.141 n=12573
+|   |   education not in {10th grade, 11th grade, 12th grade no diploma, 1st 2nd 3rd or 4th grade, 5th or 6th grade, 7th and 8th grade, 9th grade, Associates degree-academic program, Associates degree-occup /vocational, High school graduate, Less than 1st grade, Some college but no degree}
+|   |   |   P(>50K)=0.377 n=12323
+|   capital_gains > 7364.000
+|   |   capital_gains <= 10041.000
+|   |   |   P(>50K)=0.581 n=458
+|   |   capital_gains > 10041.000
+|   |   |   P(>50K)=0.923 n=1207

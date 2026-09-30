@@ -1,0 +1,18 @@
+{
+  "tool": "rpart",
+  "experiment": "expB",
+  "params": {
+    "max_depth": 14,
+    "min_samples_leaf": 50,
+    "class_weight": "none"
+  },
+  "threshold": 0.32,
+  "fit_seconds": 2.25,
+  "predict_seconds": 0.370000000000005,
+  "n_nodes": 1227,
+  "n_leaves": 614,
+  "depth": 14,
+  "test_metrics": {
+    "pr_auc": 0.591894819410274
+  }
+}

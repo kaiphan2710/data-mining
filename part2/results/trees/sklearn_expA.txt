@@ -1,0 +1,46 @@
+|--- num__capital_gains <= 7364.00
+|   |--- num__weeks_worked_in_year <= 47.50
+|   |   |--- num__dividends_from_stocks <= 12689.50
+|   |   |   |--- num__dividends_from_stocks <= 87.50
+|   |   |   |   |--- truncated branch of depth 5
+|   |   |   |--- num__dividends_from_stocks >  87.50
+|   |   |   |   |--- truncated branch of depth 5
+|   |   |--- num__dividends_from_stocks >  12689.50
+|   |   |   |--- num__dividends_from_stocks <= 29175.00
+|   |   |   |   |--- truncated branch of depth 2
+|   |   |   |--- num__dividends_from_stocks >  29175.00
+|   |   |   |   |--- class: 1
+|   |--- num__weeks_worked_in_year >  47.50
+|   |   |--- num__dividends_from_stocks <= 88.50
+|   |   |   |--- cat__sex_Female <= 0.50
+|   |   |   |   |--- truncated branch of depth 5
+|   |   |   |--- cat__sex_Female >  0.50
+|   |   |   |   |--- truncated branch of depth 5
+|   |   |--- num__dividends_from_stocks >  88.50
+|   |   |   |--- cat__sex_Male <= 0.50
+|   |   |   |   |--- truncated branch of depth 5
+|   |   |   |--- cat__sex_Male >  0.50
+|   |   |   |   |--- truncated branch of depth 5
+|--- num__capital_gains >  7364.00
+|   |--- num__capital_gains <= 10041.00
+|   |   |--- cat__tax_filer_status_Single <= 0.50
+|   |   |   |--- cat__sex_Female <= 0.50
+|   |   |   |   |--- truncated branch of depth 5
+|   |   |   |--- cat__sex_Female >  0.50
+|   |   |   |   |--- truncated branch of depth 2
+|   |   |--- cat__tax_filer_status_Single >  0.50
+|   |   |   |--- num__num_persons_worked_for_employer <= 3.50
+|   |   |   |   |--- class: 0
+|   |   |   |--- num__num_persons_worked_for_employer >  3.50
+|   |   |   |   |--- class: 0
+|   |--- num__capital_gains >  10041.00
+|   |   |--- cat__sex_Male <= 0.50
+|   |   |   |--- cat__marital_status_Married-civilian spouse present <= 0.50
+|   |   |   |   |--- truncated branch of depth 3
+|   |   |   |--- cat__marital_status_Married-civilian spouse present >  0.50
+|   |   |   |   |--- truncated branch of depth 3
+|   |   |--- cat__sex_Male >  0.50
+|   |   |   |--- num__weeks_worked_in_year <= 31.50
+|   |   |   |   |--- truncated branch of depth 2
+|   |   |   |--- num__weeks_worked_in_year >  31.50
+|   |   |   |   |--- truncated branch of depth 5

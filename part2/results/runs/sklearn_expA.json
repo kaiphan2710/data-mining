@@ -1,0 +1,29 @@
+{
+  "tool": "sklearn",
+  "experiment": "expA",
+  "params": {
+    "max_depth": 8,
+    "min_samples_leaf": 50,
+    "class_weight": "none"
+  },
+  "threshold": 0.5,
+  "fit_seconds": 4.449233499999536,
+  "predict_seconds": 0.02858570000171312,
+  "n_nodes": 207,
+  "n_leaves": 104,
+  "depth": 8,
+  "test_metrics": {
+    "threshold": 0.5,
+    "accuracy": 0.9506872035518159,
+    "balanced_accuracy": 0.656424716393508,
+    "precision": 0.7471698113207547,
+    "recall": 0.3200775945683802,
+    "f1": 0.4481665912177456,
+    "roc_auc": 0.9240090002754069,
+    "pr_auc": 0.5593018830161133,
+    "tn": 92023,
+    "fp": 670,
+    "fn": 4206,
+    "tp": 1980
+  }
+}

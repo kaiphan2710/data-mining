@@ -1,0 +1,29 @@
+{
+  "tool": "own_cart",
+  "experiment": "expB",
+  "params": {
+    "max_depth": 14,
+    "min_samples_leaf": 50,
+    "class_weight": "none"
+  },
+  "threshold": 0.3146067415730337,
+  "fit_seconds": 7.09000460000243,
+  "predict_seconds": 0.055946600001334446,
+  "n_nodes": 1223,
+  "n_leaves": 612,
+  "depth": 14,
+  "test_metrics": {
+    "threshold": 0.3146067415730337,
+    "accuracy": 0.944922582145855,
+    "balanced_accuracy": 0.7704983145956448,
+    "precision": 0.5584887764780272,
+    "recall": 0.5711283543485289,
+    "f1": 0.5647378516624041,
+    "roc_auc": 0.9239324811189296,
+    "pr_auc": 0.5894903124335582,
+    "tn": 89900,
+    "fp": 2793,
+    "fn": 2653,
+    "tp": 3533
+  }
+}

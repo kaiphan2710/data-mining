@@ -1,0 +1,20 @@
+{
+  "params": {
+    "max_depth": 8,
+    "min_samples_leaf": 50,
+    "class_weight": "none"
+  },
+  "probability_agreement": 1.0,
+  "label_agreement": 1.0,
+  "own_n_leaves": 111,
+  "sklearn_n_leaves": 111,
+  "own_root": [
+    "capital_gains",
+    7364.0
+  ],
+  "sklearn_root": [
+    "capital_gains",
+    7364.0
+  ],
+  "max_abs_importance_diff": 1.4155343563970746e-15
+}

@@ -1,0 +1,21 @@
+# Local tooling and Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.superpowers/
+
+# Assignment documents and planning notes
+*.md
+README*
+docs/
+documents/
+*.pdf
+*.docx
+
+# Large source and generated datasets
+raw/census-income.data
+raw/census-income.test
+data/raw/
+data/cleaned/
+data/model_ready/
