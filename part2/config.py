@@ -10,7 +10,8 @@ RESULTS_DIR = ROOT / "part2" / "results"
 TARGET = "income_class"
 FOLD = "fold"
 
-# Sampling weight; UCI documentation says it must not be used as a classifier input.
+# Survey expansion weight, excluded from predictors. Record-level metrics below
+# do not use survey weights; balanced class weights are a separate model option.
 DROP_COLS = ["instance_weight"]
 
 NUMERIC_COLS = [
@@ -35,7 +36,7 @@ CODED_CATEGORICAL_COLS = [
 SEED = 42
 N_FOLDS = 5
 
-# Experiment A: one fixed configuration shared by all three tools.
+# Experiment A: shared settings; one-hot and native subset encodings still differ.
 EXP_A_PARAMS = {"max_depth": 8, "min_samples_leaf": 50, "class_weight": None}
 
 # Experiment B: identical grid tuned with the shared stratified folds in every tool.

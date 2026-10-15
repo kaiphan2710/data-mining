@@ -5,9 +5,9 @@ __pycache__/
 .ipynb_checkpoints/
 .superpowers/
 
-# Assignment documents and planning notes
+# Assignment documents and planning notes (the project README is kept)
 *.md
-README*
+!README.md
 docs/
 documents/
 *.pdf

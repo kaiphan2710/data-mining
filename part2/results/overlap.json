@@ -1,0 +1,21 @@
+{
+  "model_features_only": {
+    "n_columns": 40,
+    "matched_test_rows": 25996,
+    "total_test_rows": 98879,
+    "fraction": 0.262907189595364
+  },
+  "features_with_instance_weight": {
+    "n_columns": 41,
+    "matched_test_rows": 2623,
+    "total_test_rows": 98879,
+    "fraction": 0.026527371838307428
+  },
+  "full_cleaned_rows": {
+    "n_columns": 42,
+    "matched_test_rows": 2623,
+    "total_test_rows": 98879,
+    "fraction": 0.026527371838307428
+  },
+  "interpretation": "Identical feature vectors do not establish identical people or quantify score inflation. No models are refitted by this audit."
+}

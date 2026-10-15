@@ -142,14 +142,24 @@ plot_shallow_tree <- function(p) {
   if (!requireNamespace("rpart.plot", quietly = TRUE)) return(invisible(NULL))
   shallow <- fit_rpart(train, modifyList(p, list(max_depth = 3)))
   png(file.path(RESULTS, "figures", "rpart_tree_depth3.png"),
-      width = 2400, height = 1400, res = 200)
+      width = 3000, height = 1300, res = 200)
+  # Full category names (faclen = 0) wrapped to stay inside the figure, and thresholds
+  # printed as plain numbers (rpart.plot would show 10041 as "10.041e+3").
   wrap_labels <- function(x, labs, digits, varlen, faclen) {
-    sapply(labs, function(l) paste(strwrap(gsub(",", ", ", l), width = 40), collapse = "
-"))
+    sapply(labs, function(l) {
+      sci <- regmatches(l, regexpr("[0-9.]+e[+-]?[0-9]+", l))
+      if (length(sci)) l <- sub(sci, format(as.numeric(sci), scientific = FALSE), l, fixed = TRUE)
+      paste(strwrap(gsub(",(\\S)", ", \\1", l), width = 30), collapse = "\n")
+    })
   }
-  rpart.plot::rpart.plot(shallow, type = 4, extra = 106, under = TRUE, faclen = 12,
-                         varlen = 0, roundint = FALSE, box.palette = "Blues",
-                         split.fun = wrap_labels, fallen.leaves = TRUE)
+  # Node label: P(>50K) and the training count (a percentage rounds small leaves to 0%).
+  node_labels <- function(x, labs, digits, varlen) {
+    sprintf("P=%.2f\nn=%s", x$frame$yval2[, 5], formatC(x$frame$n, big.mark = ",", format = "d"))
+  }
+  rpart.plot::rpart.plot(shallow, type = 4, under = TRUE, faclen = 0, varlen = 0,
+                         digits = 5, roundint = FALSE, box.palette = "Blues",
+                         split.fun = wrap_labels, node.fun = node_labels,
+                         fallen.leaves = TRUE, cex = 0.62, mar = c(0.5, 0.5, 0.5, 0.5))
   dev.off()
 }
 

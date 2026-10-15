@@ -1,9 +1,10 @@
 """CART (Breiman et al., 1984) binary classification tree implemented from scratch with NumPy.
 
 Numeric features use binary threshold splits; nominal features use binary subset
-splits found with Breiman's ordering theorem (sort categories by their positive
-rate, then only K-1 prefix splits need to be scanned). Impurity is Gini with
-optional class weights.
+splits searched by ordering categories by their positive rate and scanning K-1
+prefix splits. The ordering theorem gives the unrestricted binary-target Gini
+optimum; a minimum leaf-size constraint can exclude every ordered prefix even
+when a non-prefix partition is feasible. Impurity is Gini with optional class weights.
 """
 from dataclasses import dataclass
 

@@ -109,11 +109,13 @@ def confusion(table, experiment="expB"):
     for ax, tool in zip(axes, TOOLS):
         row = table[(table.tool == tool) & (table.experiment == experiment)].iloc[0]
         cm = np.array([[row.tn, row.fp], [row.fn, row.tp]])
-        ax.imshow(cm, cmap="Blues")
+        # Colour by share of each actual class (row), so the small >50K row stays readable.
+        share = cm / cm.sum(axis=1, keepdims=True)
+        ax.imshow(share, cmap="Blues", vmin=0, vmax=1)
         ax.grid(False)
         for (i, j), v in np.ndenumerate(cm):
-            ax.text(j, i, f"{v:,}", ha="center", va="center",
-                    color="white" if v > cm.max() / 2 else "#0b0b0b")
+            ax.text(j, i, f"{v:,}\n({share[i, j]:.1%})", ha="center", va="center",
+                    color="white" if share[i, j] > 0.5 else "#0b0b0b")
         ax.set(xticks=[0, 1], yticks=[0, 1], xticklabels=["<=50K", ">50K"],
                yticklabels=["<=50K", ">50K"], xlabel="Predicted", ylabel="Actual",
                title=f"{LABELS[tool]}\nthreshold={row.threshold:.3f}")
